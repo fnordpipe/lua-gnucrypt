@@ -12,7 +12,7 @@ source = {
 }
 
 dependencies = {
-	"lua 5.1",
+	"lua <= 5.3",
 }
 
 build = {
@@ -20,6 +20,8 @@ build = {
 	install_pass = false,
 	build_variables = {
 		CFLAGS="$(CFLAGS)",
+		LUA="$(LUA)",
+		LUA_INCDIR="$(LUA_INCDIR)",
 	},
 	install = {
 		lib = {

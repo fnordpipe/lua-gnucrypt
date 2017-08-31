@@ -1,6 +1,14 @@
 LDFLAGS += -shared -lcrypt
 CFLAGS += -fPIC
-INC = -I/usr/include/lua5.1
+
+ifndef LUA
+LUA = lua5.1
+endif
+ifdef LUA_INCDIR
+INC += -I${LUA_INCDIR}
+else
+INC += -I/usr/include/${LUA}
+endif
 
 all: gnucrypt.so
 

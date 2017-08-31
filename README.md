@@ -1,6 +1,6 @@
 # gnucrypt
 
-a glibc crypt(3) wrapper
+a glibc crypt(3) wrapper (compat: lua <= 5.3)
 
 # example
 

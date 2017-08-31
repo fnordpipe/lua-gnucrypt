@@ -3,6 +3,11 @@
 
 #include <crypt.h>
 
+#if LUA_VERSION_NUM < 502
+	#define luaL_newlib(L, m) \
+		(lua_newtable(L), luaL_register(L, NULL, m))
+#endif
+
 static int glibc_crypt(lua_State *L) {
 	char *password, *salt, *hash;
 
@@ -20,6 +25,6 @@ static const struct luaL_Reg gnucrypt [] = {
 };
 
 int luaopen_gnucrypt(lua_State *L) {
-	luaL_register(L, "gnucrypt", gnucrypt);
+	luaL_newlib(L, gnucrypt);
 	return 1;
 }
