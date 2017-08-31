@@ -1,5 +1,5 @@
 package = "gnucrypt"
-version = "scm-1"
+version = "scm-0"
 
 description = {
 	summary = "glibc crypt(3) wrapper",
