@@ -1,25 +1,18 @@
-# gnucrypt
+# Moved to GitLab
 
-a glibc crypt(3) wrapper (compat: lua <= 5.3)
+Due to the recent circumstances where GitHub has been acquired by Microsoft, 
+I have decided to leave this place. There can't be any better time to move 
+to an open-source project (at least one where most parts are) rather than 
+staying and by that supporting Microsoft to build up yet another monopoly 
+based on a closed-source software.
 
-# example
+**This repository is now hosted on [GitLab](https://gitlab.com/fnordpipe)**
 
-	~ > lua5.1 
-	Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
-	>
-	> -- load module
-	> c = require('gnucrypt')
-	>
-	> -- crypt password
-	> print(c.crypt('password', 'salt'))
-	sa3tHJ3/KuYvI
-	> print(c.crypt('password', '$1$salt'))
-	$1$salt$qJH7.N4xYta3aEG/dfqo/0
-	> print(c.crypt('password', '$5$salt'))
-	$5$salt$Gcm6FsVtF/Qa77ZKD.iwsJlCVPY0XSMgLJL0Hnww/c1
-	> print(c.crypt('password', '$6$salt'))
-	$6$salt$IxDD3jeSOb5eB1CX5LBsqZFVkJdido3OUILO5Ifz5iwMuTS4XMS130MTSuDDl3aCI6WouIL9AjRbLCelDCy.g.
-	>
-	> -- compare password
-	> print(c.crypt('password', '$6$salt$IxDD3jeSOb5eB1CX5LBsqZFVkJdido3OUILO5Ifz5iwMuTS4XMS130MTSuDDl3aCI6WouIL9AjRbLCelDCy.g.'))
-	$6$salt$IxDD3jeSOb5eB1CX5LBsqZFVkJdido3OUILO5Ifz5iwMuTS4XMS130MTSuDDl3aCI6WouIL9AjRbLCelDCy.g.
+We already live in a world almost exclusively controlled by closed software.
+I hope as many people as possible will follow, in order to build up a 
+new open-source standard of git hosting. I believe that all developers 
+(especially open-source developers) should understand this point of view.
+
+I highly appreciate anyone who takes the opportunity and does the same.
+
+See you on GitLab
